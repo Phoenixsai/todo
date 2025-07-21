@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+
+
+body {
+    background: #2C2C2C;
+    color: white;
+    margin: 0;
+    font-family: inter;
+    width: 100%;
+}
+
+header {
+    padding-top: 5.3rem;
+}
+
+.container {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+
+    h1 {
+        font-size: 6.4rem;
+        font-family: "Racing Sans One", sans-serif;
+    }
+}
+
+.s-line {
+    height: 1px;
+    width: 50px;
+    border-top: 1px solid white;
+}
+
+.l-line {
+    height: 1px;
+    border-top: 1px solid white;
+    width: 240px;
+}
+
+.c-2 {
+    gap: 35px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 35px;
+
+    input {
+
+        padding: 10px 20px;
+        /* position: relative; */
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 20px;
+        font-family: "Racing Sans One", sans-serif;
+        font-size: 25px;
+    }
+
+    .text {
+        max-width: 826px;
+        width: 826px;
+        background-color: #D9D9D9;
+        color: black;
+        position: relative;
+        left: 60px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        /* position: relative; */
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 20px;
+        font-family: "Racing Sans One", sans-serif;
+        font-size: 25px;
+        background-color: #4F4F4F;
+        color: white;
+        position: relative;
+        left: -75px;
+        cursor: pointer;
+    }
+}
+
+.l-line2 {
+    height: 1px;
+    border-top: 1px solid white;
+    width: 966px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+main {
+    margin-top: 80px;
+}
+
+.task-container {
+    display: flex;
+    /* gap: 2.4rem; */
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: #222222;
+    margin-bottom: 35px;
+    width: 822px;
+    height: 38px;
+    border-radius: 10px;
+
+    p {
+        font-size: 19px;
+        margin: 8px 0 8px 18px;
+    }
+
+    button {
+        /* color: white; */
+        cursor: pointer;
+        padding: 4.75px;
+        background: #999999;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 10px;
+
+        img {
+            width: 28.5px;
+            height: 28.5px;
+        }
+    }
+}
