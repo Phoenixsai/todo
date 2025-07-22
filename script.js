@@ -73,3 +73,46 @@ function renderTask(taskText) {
   `;
   parentElement.insertAdjacentHTML("beforeend", taskHTML);
 }
+
+const apiKey = "78b5236044904cf7aff92325252207";
+const city = "Ibadan,NG"; // use "City,CountryCode"
+
+async function loadWeather() {
+  try {
+    const response = await fetch(
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Ibadan&aqi=no`
+    );
+
+    if (!response.ok) throw new Error("Failed to fetch weather");
+
+    const data = await response.json();
+
+    // Update temperature
+    document.querySelector(".temperature").textContent = Math.round(
+      data.current.temp_c
+    );
+
+    // Update location
+    document.getElementById("weather-location").textContent =
+      data.location.name + ", " + data.location.country;
+
+    // Update date
+    const date = new Date(data.location.localtime);
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "2-digit",
+    });
+    document.getElementById("weather-date").textContent = formattedDate;
+
+    // Update weather icon
+    document.getElementById(
+      "weather-img"
+    ).src = `https:${data.current.condition.icon}`;
+  } catch (err) {
+    console.error("Weather load failed:", err);
+    alert("Failed to load weather. Check API key or network.");
+  }
+}
+
+loadWeather();
